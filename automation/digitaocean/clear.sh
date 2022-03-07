@@ -1,5 +1,7 @@
 #!/bin/bash
 
+doctl auth switch --context default
+
 # Load list of droplets ID
 DROPLETS=$(doctl compute droplet list --format ID,Name | grep stop-russia | awk '{print $1}')
 

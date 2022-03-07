@@ -13,6 +13,8 @@ else
   HASH=$(date | md5)
   fi
 
+doctl auth switch --context default
+
 for ((c=1; c<=NUMDROPLETS; c++))
 do
      # get a random region from the list of all available
